@@ -1,0 +1,731 @@
+< 2024-07-17 06:17:14.432 UTC >LOG:  database system was interrupted; last known up at 2024-07-16 10:31:35 UTC
+< 2024-07-17 06:17:16.682 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-17 06:17:16.696 UTC >LOG:  redo starts at 0/18344E0
+< 2024-07-17 06:17:16.699 UTC >LOG:  invalid record length at 0/1835280: wanted 24, got 0
+< 2024-07-17 06:17:16.699 UTC >LOG:  redo done at 0/1835248
+< 2024-07-17 06:17:16.699 UTC >LOG:  last completed transaction was at log time 2024-07-16 10:32:54.796213+00
+< 2024-07-17 06:17:16.766 UTC >LOG:  database system is ready to accept connections
+< 2024-07-17 06:20:42.148 UTC >LOG:  received smart shutdown request
+< 2024-07-17 06:20:42.156 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-17 06:20:42.156 UTC >LOG:  shutting down
+< 2024-07-17 06:20:42.216 UTC >LOG:  database system is shut down
+< 2024-07-17 06:26:21.651 UTC >LOG:  database system was shut down at 2024-07-17 06:20:42 UTC
+< 2024-07-17 06:26:21.670 UTC >LOG:  database system is ready to accept connections
+< 2024-07-17 06:26:26.975 UTC >FATAL:  role "root" does not exist
+2024-07-17 06:26:42 UTC [11] AUDIT: SUCCESS, CONNECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-17 06:27:21 UTC [11] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:27:35 UTC [11] AUDIT: SUCCESS, SUBJECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10):SQL:ALTER USER postgres WITH PASSWORD 'qazxsw123';
+2024-07-17 06:28:22 UTC [11] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:28:32 UTC [11] AUDIT: SUCCESS, DISCONNECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10)
+< 2024-07-17 06:30:06.466 UTC >LOG:  database system was interrupted; last known up at 2024-07-17 06:26:21 UTC
+< 2024-07-17 06:30:08.768 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-17 06:30:08.782 UTC >LOG:  redo starts at 0/1835398
+< 2024-07-17 06:30:08.785 UTC >LOG:  invalid record length at 0/18362A8: wanted 24, got 0
+< 2024-07-17 06:30:08.785 UTC >LOG:  redo done at 0/1836270
+< 2024-07-17 06:30:08.785 UTC >LOG:  last completed transaction was at log time 2024-07-17 06:27:35.405577+00
+< 2024-07-17 06:30:08.833 UTC >LOG:  database system is ready to accept connections
+2024-07-17 06:30:25 UTC [14] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-17 06:30:41 UTC [14] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10)
+< 2024-07-17 06:32:20.406 UTC >LOG:  database system was interrupted; last known up at 2024-07-17 06:30:08 UTC
+< 2024-07-17 06:32:22.666 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-17 06:32:22.679 UTC >LOG:  redo starts at 0/1836318
+< 2024-07-17 06:32:22.679 UTC >LOG:  invalid record length at 0/1836350: wanted 24, got 0
+< 2024-07-17 06:32:22.679 UTC >LOG:  redo done at 0/1836318
+< 2024-07-17 06:32:22.730 UTC >LOG:  database system is ready to accept connections
+2024-07-17 06:32:40 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-17 06:33:22 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:34:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:35:21 UTC [7] AUDIT: SUCCESS, SUBJECT, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10):SQL:CREATE ROLE f_user WITH
+	LOGIN
+	NOSUPERUSER
+	NOCREATEDB
+	NOCREATEROLE
+	INHERIT
+	NOREPLICATION
+	NOBYP
+2024-07-17 06:35:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+< 2024-07-17 06:36:05.851 UTC >ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+< 2024-07-17 06:36:05.851 UTC >HINT:  Use the same encoding as in the template database, or use template0 as template.
+< 2024-07-17 06:36:05.851 UTC >STATEMENT:  CREATE DATABASE flights_table
+	    WITH
+	    OWNER = f_user
+	    ENCODING = 'UTF8'
+	    CONNECTION LIMIT = -1
+	    IS_TEMPLATE = False;
+	
+2024-07-17 06:36:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:36:36 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10): database "flights_table"
+2024-07-17 06:36:38 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-17 06:37:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:37:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:38:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:38:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:39:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:39:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:39:55 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "postgres" (10), CU = "postgres" (10)
+2024-07-17 06:39:55 UTC [7] AUDIT: SUCCESS, DROP, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10):SQL:DROP DATABASE IF EXISTS flights_table;
+
+< 2024-07-17 06:40:19.315 UTC >ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+< 2024-07-17 06:40:19.315 UTC >HINT:  Use the same encoding as in the template database, or use template0 as template.
+< 2024-07-17 06:40:19.315 UTC >STATEMENT:  CREATE DATABASE flights_table
+	    WITH
+	    OWNER = f_user
+	    ENCODING = 'UTF8'
+	    CONNECTION LIMIT = -1
+	    IS_TEMPLATE = False;
+	
+< 2024-07-17 06:40:41.249 UTC >ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+< 2024-07-17 06:40:41.249 UTC >HINT:  Use the same encoding as in the template database, or use template0 as template.
+< 2024-07-17 06:40:41.249 UTC >STATEMENT:  CREATE DATABASE flights_table
+	    WITH
+	    OWNER = f_user
+	    ENCODING = 'UTF8'
+	    CONNECTION LIMIT = -1
+	    IS_TEMPLATE = False;
+	
+2024-07-17 06:41:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:42:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:42:49 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10): database "flights_table"
+2024-07-17 06:42:51 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-17 06:43:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:43:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:44:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_migrations_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_migrations"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "django_migrations" ("id" bigserial NOT NULL PRIMARY KEY, "app" varchar(255) NOT NULL, 
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_content_type_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_content_type"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "django_content_type" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(100) NOT NULL, 
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "django_content_type" ADD CONSTRAINT "django_content_type_app_label_model_76bd3d3b_uniq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "django_content_type" ADD CONSTRAINT "django_content_type_app_label_model_76bd3d3b_uniq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_permission_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_permission" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(50) NOT NULL, "cont
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_group_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_group"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_group" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(80) NOT NULL UNIQUE)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_group" ("id" serial NOT NULL PRIMARY KEY, "name" varchar(80) NOT NULL UNIQUE)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_group_permissions_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_group_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_group_permissions" ("id" bigserial NOT NULL PRIMARY KEY, "group_id" integer NOT N
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_user_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_user" ("id" serial NOT NULL PRIMARY KEY, "password" varchar(128) NOT NULL, "last_
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_user" ("id" serial NOT NULL PRIMARY KEY, "password" varchar(128) NOT NULL, "last_
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_user_groups_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_user_groups"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_user_groups" ("id" bigserial NOT NULL PRIMARY KEY, "user_id" integer NOT NULL, "g
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_user_user_permissions_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "auth_user_user_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "auth_user_user_permissions" ("id" bigserial NOT NULL PRIMARY KEY, "user_id" integer NO
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_permission" ADD CONSTRAINT "auth_permission_content_type_id_codename_01ab375a_uniq
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_permission" ADD CONSTRAINT "auth_permission_content_type_id_codename_01ab375a_uniq
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_permission" ADD CONSTRAINT "auth_permission_content_type_id_2f476e4b_fk_django_co"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "django_content_type"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "django_content_type"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_permission_content_type_id_2f476e4b" ON "auth_permission" ("content_type_id")
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_group_name_a6ea08ec_like" ON "auth_group" ("name" varchar_pattern_ops)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissions_group_id_permission_id_0
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissions_group_id_permission_id_0
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissions_group_id_b120cbf9_fk_aut
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_group"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_group"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_group_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_group_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group_permissions" ADD CONSTRAINT "auth_group_permissio_permission_id_84c5c92e_fk_
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_group_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_group_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_group_permissions_group_id_b120cbf9" ON "auth_group_permissions" ("group_id")
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_group_permissions_permission_id_84c5c92e" ON "auth_group_permissions" ("permissio
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_user_username_6821ab7c_like" ON "auth_user" ("username" varchar_pattern_ops)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_user_id_group_id_94350c0c_uniq" UNIQ
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_user_id_group_id_94350c0c_uniq" UNIQ
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_user_id_6a12ed8b_fk_auth_user_id" FO
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_user_groups"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_user_groups"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_groups" ADD CONSTRAINT "auth_user_groups_group_id_97559544_fk_auth_group_id" 
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_group"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_group"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_user_groups"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_user_groups"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_user_groups_user_id_6a12ed8b" ON "auth_user_groups" ("user_id")
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_user_groups_group_id_97559544" ON "auth_user_groups" ("group_id")
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permissions_user_id_permissi
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permissions_user_id_permissi
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permissions_user_id_a95ead1b
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_user_user_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_user_user_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user_user_permissions" ADD CONSTRAINT "auth_user_user_permi_permission_id_1fbb5f2c
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_permission"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "auth_user_user_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "auth_user_user_permissions"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_user_user_permissions_user_id_a95ead1b" ON "auth_user_user_permissions" ("user_id
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "auth_user_user_permissions_permission_id_1fbb5f2c" ON "auth_user_user_permissions" ("p
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_admin_log_id_seq"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_admin_log"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "django_admin_log" ("id" serial NOT NULL PRIMARY KEY, "action_time" timestamp with time
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "django_admin_log" ADD CONSTRAINT "django_admin_log_content_type_id_c4bce8eb_fk_django_c
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "django_content_type"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "django_content_type"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "django_admin_log"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "django_admin_log"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "django_admin_log" ADD CONSTRAINT "django_admin_log_user_id_c564eba6_fk_auth_user_id" FO
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER DELETE trigger "RI_ConstraintTrigger_a" for relation "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_a" for relation "auth_user"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER INSERT trigger "RI_ConstraintTrigger_c" for relation "django_admin_log"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): AFTER UPDATE trigger "RI_ConstraintTrigger_c" for relation "django_admin_log"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "django_admin_log_content_type_id_c4bce8eb" ON "django_admin_log" ("content_type_id")
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "django_admin_log_user_id_c564eba6" ON "django_admin_log" ("user_id")
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "django_content_type" ALTER COLUMN "name" DROP NOT NULL
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "django_content_type" DROP COLUMN "name" CASCADE
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_permission" ALTER COLUMN "name" TYPE varchar(255)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "email" TYPE varchar(254)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "last_login" DROP NOT NULL
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "username" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "username" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "username" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "last_name" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group" ALTER COLUMN "name" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group" ALTER COLUMN "name" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_group" ALTER COLUMN "name" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "auth_user" ALTER COLUMN "first_name" TYPE varchar(150)
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "django_session"
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "django_session" ("session_key" varchar(40) NOT NULL PRIMARY KEY, "session_data" text N
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "django_session_session_key_c0390e0f_like" ON "django_session" ("session_key" varchar_p
+2024-07-17 06:44:53 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE INDEX "django_session_expire_date_a5c62663" ON "django_session" ("expire_date")
+2024-07-17 06:44:54 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 06:45:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:45:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:46:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:46:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:47:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:47:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:48:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:48:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:49:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:49:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:50:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:50:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:51:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:51:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:52:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:52:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:53:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:53:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:54:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:54:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:55:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:55:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:56:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:56:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:57:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:57:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:57:56 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 06:58:23 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:58:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:59:05 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 06:59:06 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 06:59:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 06:59:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:00:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:00:53 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:01:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:01:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:02:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:02:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:03:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:03:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:04:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:04:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:05:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:05:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:06:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:06:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:07:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:07:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:08:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:08:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:09:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:09:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:10:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:10:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:11:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:11:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:12:21 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:12:23 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:12:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:12:27 UTC [7] AUDIT: FAILURE, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): lost frontend connection
+2024-07-17 07:12:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:13:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:13:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:14:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:14:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:15:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:15:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:16:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:16:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:17:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:17:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:18:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:18:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:19:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:19:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:20:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:20:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:21:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:21:48 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:21:51 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+< 2024-07-17 07:21:51.954 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.954 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table"
+< 2024-07-17 07:21:51.983 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.983 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.985 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.985 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.986 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.986 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.988 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.988 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.989 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.989 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.990 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.990 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.991 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.991 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.993 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.993 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.994 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.994 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.995 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.995 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.997 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.997 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.998 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.998 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+< 2024-07-17 07:21:51.999 UTC >ERROR:  relation "flights_table_f_table" does not exist at character 328
+< 2024-07-17 07:21:51.999 UTC >STATEMENT:  SELECT "flights_table_f_table"."id", "flights_table_f_table"."company_name", "flights_table_f_table"."f_from", "flights_table_f_table"."f_to", "flights_table_f_table"."when_f", "flights_table_f_table"."when_t", "flights_table_f_table"."seats", "flights_table_f_table"."passangers", "flights_table_f_table"."aircraft_type" FROM "flights_table_f_table" LIMIT 21
+2024-07-17 07:21:52 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:21:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:22:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:22:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:23:01 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:23:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:23:38 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:23:38 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "flights_table_f_table_id_seq"
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): table "flights_table_f_table"
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, CREATE, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:CREATE TABLE "flights_table_f_table" ("id" bigserial NOT NULL PRIMARY KEY, "company_name" varchar(20
+2024-07-17 07:23:52 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:23:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:24:13 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:24:16 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:24:16 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:24:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:24:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:25:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:25:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:26:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:26:43 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:26:43 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:26:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:27:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:27:54 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:28:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:28:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:29:10 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:29:10 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:29:23 UTC [7] AUDIT: FAILURE, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): lost frontend connection
+2024-07-17 07:29:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:29:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:30:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:30:28 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:30:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:30:56 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:31:18 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:31:24 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:31:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:31:24 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:31:25 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:31:25 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:31:29 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:31:29 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:31:29 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:31:29 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:31:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:32:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:32:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:33:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:33:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:34:19 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:34:21 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:34:23 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:34:24 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:34:24 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:34:24 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:34:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:34:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:35:10 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+< 2024-07-17 07:35:10.460 UTC >ERROR:  invalid input syntax for integer: "Самолет1" at character 267
+< 2024-07-17 07:35:10.460 UTC >STATEMENT:  INSERT INTO "flights_table_f_table" ("company_name", "f_from", "f_to", "when_f", "when_t", "seats", "passangers", "aircraft_type") VALUES (E'СуперАвиа', E'Лондон', E'Париж', '2024-07-17T07:34:41+00:00'::timestamptz, '2024-07-24T06:00:00+00:00'::timestamptz, 20, 80, E'Самолет1') RETURNING "flights_table_f_table"."id"
+2024-07-17 07:35:10 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:35:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:35:51 UTC [7] AUDIT: FAILURE, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): lost frontend connection
+2024-07-17 07:35:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:35:56 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:36:00 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:36:00 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:36:01 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:36:02 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:36:02 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:36:02 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:36:03 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:36:03 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:36:04 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:36:04 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:36:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:36:25 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+< 2024-07-17 07:36:25.702 UTC >ERROR:  invalid input syntax for integer: "Самолет1" at character 267
+< 2024-07-17 07:36:25.702 UTC >STATEMENT:  INSERT INTO "flights_table_f_table" ("company_name", "f_from", "f_to", "when_f", "when_t", "seats", "passangers", "aircraft_type") VALUES (E'СуперАвиа', E'Лондон', E'Париж', '2024-07-17T07:36:12+00:00'::timestamptz, '2024-07-24T06:00:00+00:00'::timestamptz, 20, 80, E'Самолет1') RETURNING "flights_table_f_table"."id"
+2024-07-17 07:36:25 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:36:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:37:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:37:38 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:37:38 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:37:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:37:55 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:37:57 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:37:58 UTC [7] AUDIT: FAILURE, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): lost frontend connection
+2024-07-17 07:38:11 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:11 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:38:17 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:17 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:38:17 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:17 UTC [7] AUDIT: SUCCESS, ALTER, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384):SQL:ALTER TABLE "flights_table_f_table" ALTER COLUMN "aircraft_type" TYPE varchar(200) USING "aircraft_t
+2024-07-17 07:38:17 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:38:24 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:38:31 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:34 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:34 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:38:34 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:34 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:38:52 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:38:52 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:38:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:39:13 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:13 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:24 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:39:26 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:27 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:27 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:28 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:28 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:42 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:43 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:43 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:43 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:43 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:43 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:48 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:48 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:39:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:39:56 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:39:56 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:40:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:40:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:41:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:41:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:42:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:42:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:43:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:43:53 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:43:53 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:43:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:43:58 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:43:58 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:44:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:44:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:45:20 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:45:22 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:45:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:45:25 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:45:26 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:45:26 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:45:26 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:45:27 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:45:27 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:45:27 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:45:27 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:45:31 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:45:31 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:45:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:46:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:46:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:47:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:47:27 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:47:27 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:47:27 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:47:27 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:47:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:48:09 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:09 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:09 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:09 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:09 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:09 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:11 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:11 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:12 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:12 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:48:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:48:58 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:58 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:58 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:58 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:58 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:58 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:48:59 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:48:59 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:00 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:00 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:06 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:06 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:06 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:07 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:07 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:07 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:09 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:09 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:09 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:09 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:17 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:17 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:17 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:17 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:17 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:17 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:19 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:19 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:19 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:19 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:49:28 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:28 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:28 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:28 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:29 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:29 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:31 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): maclabel {0,0}
+2024-07-17 07:49:31 UTC [7] AUDIT: SUCCESS, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384)
+2024-07-17 07:49:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:50:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:50:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:51:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:51:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:52:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:52:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:53:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:53:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:54:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:54:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:55:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:55:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:56:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:56:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:57:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:57:41 UTC [7] AUDIT: FAILURE, DISCONNECT, 172.17.0.1, "flights_table", SU = "f_user" (16384), CU = "f_user" (16384): lost frontend connection
+2024-07-17 07:57:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:58:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:58:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:59:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 07:59:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:00:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:00:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:01:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:01:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:02:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:02:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:03:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:03:55 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:04:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:04:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:05:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:05:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:06:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:06:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:07:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:07:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:08:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:08:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:09:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:09:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:10:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:10:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:11:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:11:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:12:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:12:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:13:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:13:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:14:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:14:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:15:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:15:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:16:25 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:16:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:17:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:17:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:18:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:18:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:19:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:19:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:20:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:20:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:21:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:21:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:22:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:22:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:23:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:23:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:24:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:24:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:25:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:25:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:26:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:26:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:27:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:27:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:28:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:28:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:29:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:29:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:30:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:30:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:31:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:31:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:32:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:32:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:33:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:33:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:34:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:34:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:35:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:35:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:36:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:36:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:37:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:37:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:38:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:38:56 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:39:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:39:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:40:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:40:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:41:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:41:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:42:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:42:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:43:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:43:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:44:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:44:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:45:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:45:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:46:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:46:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:47:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:47:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:48:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:48:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:49:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:49:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:50:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:50:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:51:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:51:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:52:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:52:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:53:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:53:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:54:26 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:54:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:55:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:55:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:56:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:56:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:57:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:57:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:58:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:58:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:59:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 08:59:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:00:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:00:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:01:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:01:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:02:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:02:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:03:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:03:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:04:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:04:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:05:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:05:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:06:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:06:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:07:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:07:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:08:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:08:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:09:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:09:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:10:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:10:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:11:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:11:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:12:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:12:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:13:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:13:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:14:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:14:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:15:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:15:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:16:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:16:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:17:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:17:57 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-17 09:18:27 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+< 2024-07-17 09:18:32.377 UTC >LOG:  received smart shutdown request
+< 2024-07-17 09:20:05.386 UTC >LOG:  database system was interrupted; last known up at 2024-07-17 07:52:52 UTC
+< 2024-07-17 09:20:08.581 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-17 09:20:08.603 UTC >LOG:  redo starts at 0/1953BE0
+< 2024-07-17 09:20:08.603 UTC >LOG:  invalid record length at 0/1953CC0: wanted 24, got 0
+< 2024-07-17 09:20:08.603 UTC >LOG:  redo done at 0/1953C88
+< 2024-07-17 09:20:08.702 UTC >LOG:  database system is ready to accept connections
+< 2024-07-17 09:22:47.467 UTC >LOG:  received smart shutdown request
+< 2024-07-17 09:22:47.479 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-17 09:22:47.479 UTC >LOG:  shutting down
+< 2024-07-17 09:22:47.560 UTC >LOG:  database system is shut down
+< 2024-07-17 09:24:04.336 UTC >LOG:  database system was shut down at 2024-07-17 09:22:47 UTC
+< 2024-07-17 09:24:04.360 UTC >LOG:  database system is ready to accept connections
+< 2024-07-17 09:25:21.125 UTC >LOG:  received smart shutdown request
+< 2024-07-17 09:25:21.138 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-17 09:25:21.138 UTC >LOG:  shutting down
+< 2024-07-17 09:25:21.219 UTC >LOG:  database system is shut down

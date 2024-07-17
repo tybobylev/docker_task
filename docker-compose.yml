@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+
+  psql_db:
+
+    build: astra-psql/
+    # image: astra_psql
+
+    # ports:
+    #   - 5432:5432
+
+    volumes:
+      - ./astra-psql/pgdata:/pgdata
+
+  ticket_to:
+
+    build: astra-py/
+    # image: astra_py
+
+    depends_on:
+      - psql_db
+
+    ports:
+      - 8000:8000

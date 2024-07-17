@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+        
+        table {
+            table-layout: fixed; 
+            width: 100%;
+        }
+        table td {
+            word-wrap: break-word;
+            font-size: 0.8em;
+        }
+        table thead {            
+            position: sticky;
+            top: 2em;            
+        }
+
+    </style>
+</head>
+<body>
+    <nav>        
+        <a href="">Рейсы</a></li>
+        <a href="admin">Админка</a></li>        
+    </nav>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Авиакомпания</th>
+                <th>Откуда рейс</th>                            
+                <th>Куда рейс</th>
+                <th>Дата/время вылета</th>
+                <th>Дата/время прилета</th>
+                <th>Количество свободных мест</th>
+                <th>Количество зарег.пассажиров</th>
+                <th>Тип ВС</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for flight in flights %}
+    
+                <tr>
+                    <td>{{flight.company_name}}</td>
+                    <td>{{flight.f_from}}</td>
+                    <td>{{flight.f_to}}</td>
+                    <td>{{flight.when_f}}</td>
+                    <td>{{flight.when_t}}</td>
+                    <td>{{flight.seats}}</td>
+                    <td>{{flight.passangers}}</td>
+                    <td>{{flight.aircraft_type}}</td>
+                </tr>
+                
+            {% endfor %} 
+
+    
+        </tbody>
+    
+    </table>
+</body>
+</html>
+
+

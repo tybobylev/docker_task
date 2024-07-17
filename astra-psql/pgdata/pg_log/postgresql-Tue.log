@@ -1,0 +1,78 @@
+< 2024-07-16 10:03:50.440 UTC >LOG:  database system was shut down at 2024-07-16 10:03:20 UTC
+< 2024-07-16 10:03:50.464 UTC >LOG:  database system is ready to accept connections
+2024-07-16 10:04:05 UTC [31] AUDIT: SUCCESS, CONNECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-16 10:04:14 UTC [31] AUDIT: SUCCESS, DISCONNECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10)
+< 2024-07-16 10:06:30.928 UTC >LOG:  database system was interrupted; last known up at 2024-07-16 10:03:50 UTC
+< 2024-07-16 10:06:33.145 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-16 10:06:33.162 UTC >LOG:  redo starts at 0/1833FC0
+< 2024-07-16 10:06:33.162 UTC >LOG:  invalid record length at 0/1833FF8: wanted 24, got 0
+< 2024-07-16 10:06:33.162 UTC >LOG:  redo done at 0/1833FC0
+< 2024-07-16 10:06:33.249 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:08:02.654 UTC >LOG:  database system was interrupted; last known up at 2024-07-16 10:06:33 UTC
+< 2024-07-16 10:08:04.875 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-16 10:08:04.890 UTC >LOG:  invalid record length at 0/1834080: wanted 24, got 0
+< 2024-07-16 10:08:04.890 UTC >LOG:  redo is not required
+< 2024-07-16 10:08:04.958 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:08:28.592 UTC >LOG:  database system was interrupted; last known up at 2024-07-16 10:08:04 UTC
+< 2024-07-16 10:08:30.791 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-16 10:08:30.808 UTC >LOG:  invalid record length at 0/18340F0: wanted 24, got 0
+< 2024-07-16 10:08:30.809 UTC >LOG:  redo is not required
+< 2024-07-16 10:08:30.887 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:15:33.965 UTC >LOG:  database system was interrupted; last known up at 2024-07-16 10:08:30 UTC
+< 2024-07-16 10:15:36.186 UTC >LOG:  database system was not properly shut down; automatic recovery in progress
+< 2024-07-16 10:15:36.203 UTC >LOG:  invalid record length at 0/1834160: wanted 24, got 0
+< 2024-07-16 10:15:36.203 UTC >LOG:  redo is not required
+< 2024-07-16 10:15:36.339 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:15:49.827 UTC >LOG:  received fast shutdown request
+< 2024-07-16 10:15:49.835 UTC >LOG:  aborting any active transactions
+< 2024-07-16 10:15:49.837 UTC >LOG:  background worker "logical replication launcher" (PID 19) exited with exit code 1
+< 2024-07-16 10:15:49.837 UTC >LOG:  shutting down
+< 2024-07-16 10:15:49.919 UTC >LOG:  database system is shut down
+< 2024-07-16 10:18:40.978 UTC >LOG:  database system was shut down at 2024-07-16 10:15:49 UTC
+< 2024-07-16 10:18:41.000 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:19:49.873 UTC >LOG:  received smart shutdown request
+< 2024-07-16 10:19:49.884 UTC >LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
+< 2024-07-16 10:19:49.884 UTC >LOG:  shutting down
+< 2024-07-16 10:19:49.977 UTC >LOG:  database system is shut down
+< 2024-07-16 10:20:32.858 UTC >LOG:  database system was shut down at 2024-07-16 10:19:49 UTC
+< 2024-07-16 10:20:32.880 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:20:45.899 UTC >LOG:  received smart shutdown request
+< 2024-07-16 10:20:45.912 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-16 10:20:45.912 UTC >LOG:  shutting down
+< 2024-07-16 10:20:45.993 UTC >LOG:  database system is shut down
+< 2024-07-16 10:20:51.073 UTC >LOG:  database system was shut down at 2024-07-16 10:20:45 UTC
+< 2024-07-16 10:20:51.095 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:21:01.007 UTC >LOG:  received smart shutdown request
+< 2024-07-16 10:21:01.019 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-16 10:21:01.019 UTC >LOG:  shutting down
+< 2024-07-16 10:21:01.099 UTC >LOG:  database system is shut down
+< 2024-07-16 10:24:12.747 UTC >LOG:  database system was shut down at 2024-07-16 10:21:01 UTC
+< 2024-07-16 10:24:12.771 UTC >LOG:  database system is ready to accept connections
+< 2024-07-16 10:24:23.169 UTC >LOG:  received smart shutdown request
+< 2024-07-16 10:24:23.180 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-16 10:24:23.181 UTC >LOG:  shutting down
+< 2024-07-16 10:24:23.273 UTC >LOG:  database system is shut down
+< 2024-07-16 10:26:10.760 UTC >LOG:  database system was shut down at 2024-07-16 10:24:23 UTC
+< 2024-07-16 10:26:10.784 UTC >LOG:  database system is ready to accept connections
+2024-07-16 10:27:15 UTC [7] AUDIT: FAILURE, CONNECT, 172.17.0.1, "postgres", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): password authentication failed for user "postgres"
+< 2024-07-16 10:27:15.439 UTC >FATAL:  password authentication failed for user "postgres"
+< 2024-07-16 10:27:15.439 UTC >DETAIL:  User "postgres" has no password assigned.
+	Connection matched pg_hba.conf line 87: "host    all             all             0.0.0.0/0            md5"
+2024-07-16 10:27:15 UTC [7] AUDIT: FAILURE, CONNECT, 172.17.0.1, "postgres", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): password authentication failed for user "postgres"
+< 2024-07-16 10:27:15.447 UTC >FATAL:  password authentication failed for user "postgres"
+< 2024-07-16 10:27:15.447 UTC >DETAIL:  User "postgres" has no password assigned.
+	Connection matched pg_hba.conf line 87: "host    all             all             0.0.0.0/0            md5"
+< 2024-07-16 10:27:24.145 UTC >LOG:  received smart shutdown request
+< 2024-07-16 10:27:24.157 UTC >LOG:  background worker "logical replication launcher" (PID 16) exited with exit code 1
+< 2024-07-16 10:27:24.157 UTC >LOG:  shutting down
+< 2024-07-16 10:27:24.242 UTC >LOG:  database system is shut down
+< 2024-07-16 10:31:35.516 UTC >LOG:  database system was shut down at 2024-07-16 10:27:24 UTC
+< 2024-07-16 10:31:35.539 UTC >LOG:  database system is ready to accept connections
+2024-07-16 10:32:29 UTC [7] AUDIT: SUCCESS, CONNECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-16 10:32:35 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-16 10:32:54 UTC [7] AUDIT: SUCCESS, SUBJECT, [local], "postgres", SU = "postgres" (10), CU = "postgres" (10):SQL:ALTER USER postgres WITH PASSWORD 'qazxsw1';
+2024-07-16 10:33:13 UTC [7] AUDIT: SUCCESS, CONNECT, 172.17.0.1, "postgres", SU = "postgres" (10), CU = "postgres" (10): maclabel {0,0}
+2024-07-16 10:33:35 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-16 10:34:35 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+2024-07-16 10:35:35 UTC [7] AUDIT: SUCCESS, CONNECT, [autovacuum], "UNDEFINED", SU = "UNDEFINED" (0), CU = "UNDEFINED" (0): maclabel {0,0}
+< 2024-07-16 10:35:42.224 UTC >LOG:  received smart shutdown request
