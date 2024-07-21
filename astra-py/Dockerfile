@@ -1,4 +1,4 @@
-FROM registry.astralinux.ru/astra/ubi17-python
+FROM registry.astralinux.ru/astra/ubi17-python:1.7.5
 
 ENV LANG=C.UTF-8
 
@@ -14,4 +14,10 @@ COPY air_ticket_office /app/air_ticket_office
 
 WORKDIR /app/air_ticket_office
 
-CMD ["python3", "manage.py", "runserver"]
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+# CMD python3 manage.py runserver 0.0.0.0:8000
+
+# CMD ["bash"]

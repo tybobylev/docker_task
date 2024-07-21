@@ -13,13 +13,20 @@ services:
     volumes:
       - ./astra-psql/pgdata:/pgdata
 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
   ticket_to:
 
     build: astra-py/
     # image: astra_py
 
     depends_on:
-      - psql_db
+      psql_db:
+        condition: service_healthy
 
     ports:
       - 8000:8000
