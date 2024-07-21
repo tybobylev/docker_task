@@ -17,6 +17,8 @@ RUN mkdir $PGDATA
 COPY prep_psql.sh /
 COPY arch_psql.zip /
 
+RUN  chmod +x /prep_psql.sh
+
 # CMD [ "bash" ]
 # CMD su -l postgres -c "${PGCTL} -D ${PGDATA} -l /tmp/psql_srv.log start"
 # CMD su -l postgres -c "${PGCTL} -D ${PGDATA}"
